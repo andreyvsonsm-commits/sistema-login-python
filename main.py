@@ -1,1 +1,23 @@
-USUARIO_CORRETO = "admin" SENHA_CORRETA = "1234" tentativas = 3 acesso_concedido = False print("--- SISTEMA DE ACESSO ---")  while tentativas > 0 and not acesso_concedido: usuario = input("Usuário: ") senha = input("Senha: ")  if usuario == USUARIO_CORRETO and senha == SENHA_CORRETA: print("\n Acesso permitido! Bem-vindo.") acesso_concedido = True else: tentativas -= 1  if tentativas > 0: print(f" Acesso negado. Tentativas restantes: {tentativas}") print("-" * 20) else: print("\n Conta bloqueada! Limite de tentativas excedido.")
+USUARIO_CORRETO = "admin"
+SENHA_CORRETA = "1234"
+
+tentativas = 3
+acesso_concedido = False
+
+print("--- SISTEMA DE ACESSO ---")
+
+while tentativas > 0 and not acesso_concedido:
+    usuario = input("Usuário: ")
+    senha = input("Senha: ")
+
+    if usuario == USUARIO_CORRETO and senha == SENHA_CORRETA:
+        print("\n Acesso permitido! Bem-vindo.")
+        acesso_concedido = True
+    else:
+        tentativas -= 1 # Controle de tentativas (decremento)
+        
+        if tentativas > 0:
+            print(f" Acesso negado. Tentativas restantes: {tentativas}")
+            print("-" * 20)
+        else:
+            print("\n Conta bloqueada! Limite de tentativas excedido.")
