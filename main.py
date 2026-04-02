@@ -14,7 +14,7 @@ while tentativas > 0 and not acesso_concedido:
         print("\n Acesso permitido! Bem-vindo.")
         acesso_concedido = True
     else:
-        tentativas -= 1 # Controle de tentativas (decremento)
+        tentativas -= 1
         
         if tentativas > 0:
             print(f" Acesso negado. Tentativas restantes: {tentativas}")
